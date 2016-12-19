@@ -1,5 +1,8 @@
 
 public class Milestone extends Node {
+	
+	private int numberAfterSort; 
+	private String name;
 
 	private int earliestStart;
 	private int earliestFinish;
@@ -15,7 +18,8 @@ public class Milestone extends Node {
 	}
 
 	public Milestone(int number, String name) {
-		super(number, name);
+		super(number);
+		this.name= name;
 		this.earliestStart = 0;
 		this.earliestFinish = 0;
 		this.latestFinish = 0;
@@ -53,5 +57,22 @@ public class Milestone extends Node {
 	public void setLatestFinish(int latestFinish) {
 		this.latestFinish = latestFinish;
 	}
+
+	public int getNumberAfterSort() {
+		return numberAfterSort;
+	}
+
+	public void setNumberAfterSort(int numberAfterSort) {
+		this.numberAfterSort = numberAfterSort;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 
 }
