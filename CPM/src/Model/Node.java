@@ -1,3 +1,4 @@
+package Model;
 import java.util.ArrayList;
 
 public class Node {
@@ -14,6 +15,6 @@ public class Node {
 	}
 	public void setNumber(int number) {
 		this.number = number;
-	}	
-
+	}			
+	
 }
