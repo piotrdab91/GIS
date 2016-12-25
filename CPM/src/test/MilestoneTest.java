@@ -8,76 +8,59 @@ import Model.Milestone;
 
 public class MilestoneTest {
 
-
-	
 	@Test
-	public void testMilestoneInt() {
-		Milestone fact= new Milestone(1);
-		assertEquals(fact.getNumber(), 1);
+	public void testMilestone() {
+		Milestone fact1 = new Milestone();
+		assertEquals(null, fact1.getName());
 	}
 
 	@Test
-	public void testMilestoneIntString() {
-		Milestone fact= new Milestone(1,"Rozpoczecie");
-		assertEquals(fact.getNumber(), 1);
-		assertEquals(fact.getName(), "Rozpoczecie");	
+	public void testMilestoneString() {
+		Milestone fact1 = new Milestone("Rozpoczecie");
+		assertEquals("Rozpoczecie", fact1.getName());
+	}
+
+	@Test
+	public void testMilestoneStringIntIntIntInt() {
+		Milestone fact1 = new Milestone("Rozpoczecie", 0, 12, 5, 17);
+		assertEquals("Rozpoczecie", fact1.getName());
+		assertEquals(0, fact1.getEarliestStart());
+		assertEquals(12, fact1.getEarliestFinish());
+		assertEquals(5, fact1.getLatestStart());
+		assertEquals(17, fact1.getLatestFinish());
+
+	}
+
+	//To musi dzialac tylko pokazalem jak sie robi junit testy 
+/*
+	@Test
+	public void testSetNumberAfterSort() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetName() {
+		fail("Not yet implemented");
 	}
 
 	@Test
 	public void testSetEarliestStart() {
-		Milestone startPoint = new Milestone(1, "Start");  
-		startPoint.setEarliestStart(5);
-		assertEquals(5, startPoint.getEarliestStart());
+		fail("Not yet implemented");
 	}
-
-
 
 	@Test
 	public void testSetEarliestFinish() {
-		Milestone startPoint = new Milestone(1, "Start");  
-		startPoint.setEarliestFinish(52);
-		assertEquals(52, startPoint.getEarliestFinish());
+		fail("Not yet implemented");
 	}
 
 	@Test
 	public void testSetLatestStart() {
-		Milestone startPoint = new Milestone(1, "Start");  
-		startPoint.setLatestStart(13);
-		assertEquals(13, startPoint.getLatestStart());
+		fail("Not yet implemented");
 	}
-
 
 	@Test
 	public void testSetLatestFinish() {
-		Milestone startPoint = new Milestone(1, "Start");  
-		startPoint.setLatestFinish(22);
-		assertEquals(22, startPoint.getLatestFinish());
+		fail("Not yet implemented");
 	}
-
-
-	@Test
-	public void testSetNumberAfterSort() {
-		Milestone startPoint = new Milestone(1, "Start"); 
-		startPoint.setNumberAfterSort(5);
-		assertEquals(5, startPoint.getNumberAfterSort());
-	}
-
-
-	@Test
-	public void testSetName() {
-		Milestone startPoint = new Milestone(1, "Start"); 
-		assertEquals("Start", startPoint.getName());
-		startPoint.setName("End");
-		assertEquals("End", startPoint.getName());
-	}
-
-
-	@Test
-	public void testSetNumber() {
-		Milestone fact= new Milestone(1);
-		fact.setNumber(2);
-		assertEquals(2,fact.getNumber());
-	}
-	
-
+*/ 
 }
