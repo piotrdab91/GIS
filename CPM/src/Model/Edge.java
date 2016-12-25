@@ -1,47 +1,52 @@
 package Model;
 
-public class Edge {
+public class Edge <T> {
 
-	private Node start;
-	private Node end;
+	private Node<T> start;
+	private Node<T> end;
+	private String name;
 	private double weight;
 
-	public Edge(Node begin, Node end) {
-		this.start = begin;
-		this.end = end;
-	}
 
-	public Edge(Node begin, Node end, double weight) {
-		this.start = begin;
+	public Edge(Node<T> start, Node<T> end, double weight) {
+		this.start = start;
 		this.end = end;
 		this.weight = weight;
-
+		
 	}
 
-	public Node getStart() {
-		return start;
+	public String getName() {
+		return name;
 	}
 
-	public void setStart(Node begin) {
-		this.start = begin;
-	}
-
-	public Node getEnd() {
-		return end;
-	}
-
-	public void setEnd(Node end) {
-		this.end = end;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getWeight() {
 		return weight;
 	}
-	
 
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	
+
+	public Node<T> getStart() {
+		return start;
+	}
+
+	public void setStart(Node<T> start) {
+		this.start = start;
+	}
+
+	public Node<T> getEnd() {
+		return end;
+	}
+
+	public void setEnd(Node<T> end) {
+		this.end = end;
+	}
+
+
 
 }
