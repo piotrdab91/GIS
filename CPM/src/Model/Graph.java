@@ -12,6 +12,7 @@ public class Graph<T> {
 
 	public Graph(int numberOfNodes, Class<T> clazz){
 		createNodes(numberOfNodes,clazz);
+		System.out.println("Graph with " + numberOfNodes + " nodes created.");
 	}
 
 	private void createNodes(int numberOfNodes, Class <T> clazz) {
@@ -40,6 +41,7 @@ public class Graph<T> {
 		Edge<T> edge = new Edge<>(nodesList.get(start), nodesList.get(end), weight);
 		edge.getStart().addConnection(edge);
 		edge.getEnd().addConnection(edge);
+		System.out.println("Edge added; Start: " + start + "; End: " + end + "; Weight: " +weight + ";");
 	}
 
 	public ArrayList<Node<T>> getNodesList() {
