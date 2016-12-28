@@ -40,6 +40,8 @@ public class Graph<T> {
 		Edge<T> edge = new Edge<>(nodesList.get(start), nodesList.get(end), weight);
 		edge.getStart().addConnection(edge);
 		edge.getEnd().addConnection(edge);
+		edge.getStart().addOutgoingEdges(edge);
+		edge.getEnd().addIngoingEdges(edge);
 	}
 
 	public ArrayList<Node<T>> getNodesList() {
@@ -49,7 +51,7 @@ public class Graph<T> {
 	public void setNodesList(ArrayList<Node<T>> nodesList) {
 		this.nodesList = nodesList;
 	}
-
+/*
 	public void deleteEdge(int from, int to){
 		Node<T>start  = this.getNodesList().get(from);
 		Node<T> end = this.getNodesList().get(to);
@@ -68,6 +70,7 @@ public class Graph<T> {
 			if (currentEdge.getStart() == start && currentEdge.getEnd() == end)
 				it.remove();
 			}
-	}
+	}*/
+
 
 }

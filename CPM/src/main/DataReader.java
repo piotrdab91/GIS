@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,20 +13,20 @@ import Model.Milestone;
 
 public class DataReader {
 	
-	public static Path fileToRead(){
-		Path path = Paths.get("C:\\Users\\Patryk", "Edges.txt");
+	public static Path fileToRead(String file){
+		Path path = Paths.get("resources", file);
 		return path;
 	}
 	
-	public static Graph<Milestone> graphCreator() throws IOException{
-		int numberOfNodes = numberOfNodesReader();
-		int numberOfEdges = numberOfEdgesReader();
+	public static Graph<Milestone> graphCreator(String file) throws IOException{
+		int numberOfNodes = numberOfNodesReader(file);
+		int numberOfEdges = numberOfEdgesReader(file);
 
 		Graph<Milestone> graph = new Graph <Milestone> (numberOfNodes, Milestone.class);
 		
 		String line = null;
 		for (int i = 1 ; i <= numberOfEdges ; i++){
-			line = Files.readAllLines(fileToRead()).get(i);
+			line = Files.readAllLines(fileToRead(file)).get(i);
 			beginReader(line);
 	    	endReader(line);
 	    	weightReader(line);	
@@ -66,16 +67,16 @@ public class DataReader {
 		return weightOfEdge;
 	}
 	
-	public static int numberOfNodesReader() throws IOException {
+	public static int numberOfNodesReader(String file) throws IOException {
 		int numberOfNodes = 0;	
-		String line = Files.readAllLines(fileToRead()).get(0);
+		String line = Files.readAllLines(fileToRead(file)).get(0);
 		numberOfNodes = Integer.parseInt(line);
 		return numberOfNodes + 1; // Adding one because first node has index 0.
 	}
 	
-	public static int numberOfEdgesReader() throws IOException {
+	public static int numberOfEdgesReader(String file) throws IOException {
 		int numberOfLines = 0;  
-		numberOfLines = (int) Files.lines(fileToRead()).count();
+		numberOfLines = (int) Files.lines(fileToRead(file)).count();
 		int numberOfEdges = numberOfLines -1; // Substracting one because first line of file isn't an edge.
 		return numberOfEdges;	
 	}

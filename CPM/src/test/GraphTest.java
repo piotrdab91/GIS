@@ -24,10 +24,7 @@ public class GraphTest {
 		Graph<Milestone> graph = new Graph<Milestone>(5, Milestone.class);
 		assertEquals(0, graph.getNodesList().get(2).getNodeProperties().getNumberAfterSort());
 	}
-	/*Ten test nizej bedzie pokazuje jak  podpiac pod wezly obiekty klasy milstone. 
-	 * Tworzac graf powstaja wezly z niezainicjalizowanym polem NodeProperties
-	 * Bo nie wiem jak zrobic zainicjalizowac to odrazu, prawdopodobnie potrzebna jest jakas 
-	 * refleksja*/
+
 	@Test 
 	public void testSettingNodesPropertiesField(){
 		
@@ -69,8 +66,21 @@ public class GraphTest {
 		assertEquals(0, graph.getNodesList().get(1).getConnections().get(0).getStart().getNumber());
 		assertEquals(1, graph.getNodesList().get(1).getConnections().get(0).getEnd().getNumber());
 	}
-
 	@Test
+	public void testAddEdgeIntIntDouble_IngoingEdgesCheck(){
+		Graph<Milestone> graph = new Graph <Milestone> (6, Milestone.class);
+		graph.addEdge(0, 1, 5);
+		graph.addEdge(1, 2, 5);
+		graph.addEdge(2, 3, 5);
+		graph.addEdge(3, 4, 5);
+		graph.addEdge(2,5,6);
+		
+		assertEquals(2, graph.getNodesList().get(2).getOutgoingEdges().size());
+		assertEquals(1, graph.getNodesList().get(2).getIngoingEdges().size());
+		assertEquals(3, graph.getNodesList().get(2).getConnections().size());
+	}
+
+	/*@Test
 	public void testdeleteEdgeIntInt_One_Edge(){
 		Graph<Milestone> graph = new Graph <Milestone> (10, Milestone.class);
 		graph.addEdge(0, 1, 5);
@@ -96,4 +106,4 @@ public class GraphTest {
 		assertEquals(1, graph.getNodesList().get(3).getConnections().size());
 		assertEquals(0, graph.getNodesList().get(4).getConnections().size());
 		}
-	}
+*/	}

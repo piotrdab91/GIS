@@ -4,6 +4,7 @@ public class Milestone {
 	
 	private int numberAfterSort; 
 	private String name;
+	private int inDegree;
 
 
 	private int earliestStart;
@@ -64,7 +65,16 @@ public class Milestone {
 	public void setLatestFinish(int latestFinish) {
 		this.latestFinish = latestFinish;
 	}
+	public int getInDegree() {
+		return inDegree;
+	}
 
+	public void incInDegree() {
+		this.inDegree++;
+	}
+	public void decInDegree() {
+		this.inDegree--;
+	}
 
 	
 

@@ -40,9 +40,5 @@ public class EdgeTest {
 		assertEquals(6, end.getNodeProperties().getLatestStart());
 		assertEquals(11, end.getNodeProperties().getLatestFinish());
 	}
-	@Test
-	public void testGetStart() {
-		fail("Not yet implemented");
-	}
 
 }
