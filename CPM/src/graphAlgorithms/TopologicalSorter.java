@@ -44,10 +44,10 @@ public class TopologicalSorter {
 	}
 
 	private void addRemainingNodes() {
-
 		int size = list.size();
 		for (int i = 0; i < size; i++) {
 			Node<Milestone> node = list.get(i);
+			node.getNodeProperties().setNumberAfterSort(i);
 			for (Edge<Milestone> e : node.getOutgoingEdges()) {
 				e.getEnd().getNodeProperties().decInDegree();
 				if (e.getEnd().getNodeProperties().getInDegree() == 0) {
@@ -57,5 +57,4 @@ public class TopologicalSorter {
 			}
 		}
 	}
-
 }

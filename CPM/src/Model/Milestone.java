@@ -6,21 +6,19 @@ public class Milestone {
 	private String name;
 	private int inDegree;
 
-
-	private int earliestStart;
-	private int earliestFinish;
-	private int latestStart;
-	private int latestFinish;
-	
-	
+	private double earliestStart;
+	private double earliestFinish;
+	private double latestStart;
+	private double latestFinish;
+		
 	public Milestone() {}
 
 	public Milestone(String name) {
 		this.name = name;
 	}
 
-	public Milestone( String name, int earliestStart, int earliestFinish, int latestStart,
-			int latestFinish) {
+	public Milestone( String name, double earliestStart, double earliestFinish, double latestStart,
+			double latestFinish) {
 		this.name = name;
 		this.earliestStart = earliestStart;
 		this.earliestFinish = earliestFinish;
@@ -41,28 +39,28 @@ public class Milestone {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getEarliestStart() {
+	public double getEarliestStart() {
 		return earliestStart;
 	}
-	public void setEarliestStart(int earliestStart) {
+	public void setEarliestStart(double earliestStart) {
 		this.earliestStart = earliestStart;
 	}
-	public int getEarliestFinish() {
+	public double getEarliestFinish() {
 		return earliestFinish;
 	}
-	public void setEarliestFinish(int earliestFinish) {
+	public void setEarliestFinish(double earliestFinish) {
 		this.earliestFinish = earliestFinish;
 	}
-	public int getLatestStart() {
+	public double getLatestStart() {
 		return latestStart;
 	}
-	public void setLatestStart(int latestStart) {
+	public void setLatestStart(double latestStart) {
 		this.latestStart = latestStart;
 	}
-	public int getLatestFinish() {
+	public double getLatestFinish() {
 		return latestFinish;
 	}
-	public void setLatestFinish(int latestFinish) {
+	public void setLatestFinish(double latestFinish) {
 		this.latestFinish = latestFinish;
 	}
 	public int getInDegree() {
