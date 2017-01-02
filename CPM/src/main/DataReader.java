@@ -13,7 +13,7 @@ import Model.Milestone;
 public class DataReader {
 	
 	public static Path fileToRead(String file){
-		Path path = Paths.get("resources", file);
+		Path path = Paths.get("resources/input", file);
 		return path;
 	}
 	

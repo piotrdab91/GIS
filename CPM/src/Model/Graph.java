@@ -3,6 +3,8 @@ package Model;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import org.w3c.dom.NodeList;
+
 public class Graph<T> {
 	private ArrayList<Node<T>> nodesList = new ArrayList<Node<T>>();
 	
@@ -51,7 +53,8 @@ public class Graph<T> {
 	public void setNodesList(ArrayList<Node<T>> nodesList) {
 		this.nodesList = nodesList;
 	}
-/*
+	//TODO poprawic to i mozna usunać connections z grafu
+/* DO poprawy
 	public void deleteEdge(int from, int to){
 		Node<T>start  = this.getNodesList().get(from);
 		Node<T> end = this.getNodesList().get(to);
@@ -71,6 +74,19 @@ public class Graph<T> {
 				it.remove();
 			}
 	}*/
+
+	public int getNumberOfEdges(){
+		int degreeOfNode = 0;
+		
+		for (Node<T> node : nodesList) {
+			degreeOfNode += node.connections.size();	
+		}
+		return degreeOfNode/2;
+	}
+	@Override
+	public String toString() {
+		return "Liczba wierzcholków: " + nodesList.size() + " Liczba krawedzi: " + getNumberOfEdges();
+	}
 
 
 }
