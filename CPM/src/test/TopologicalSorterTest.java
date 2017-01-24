@@ -15,7 +15,7 @@ import Model.Node;
 import graphAlgorithms.TopologicalSorter;
 
 public class TopologicalSorterTest {
-
+/*
 	@Test
 	public void testSortKhansAlgortithm_Tree() {
 		Graph<Milestone> graph = new Graph<Milestone>(6, Milestone.class);
@@ -111,7 +111,7 @@ public class TopologicalSorterTest {
 	 * 
 	 * }
 	 */
-
+/*
 @Test (expected = InvalidAlgorithmParameterException.class )
 public void testSortKhansAlgortithm_Cyclc() throws InvalidAlgorithmParameterException {
 	Graph<Milestone> graph = new Graph<Milestone>(5, Milestone.class);
@@ -126,7 +126,6 @@ public void testSortKhansAlgortithm_Cyclc() throws InvalidAlgorithmParameterExce
 
 		list = sorter.sortKhansAlgortithm(graph);
 
-	}
+	}*/
 }
-
 

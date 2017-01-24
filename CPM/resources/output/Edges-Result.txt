@@ -54,7 +54,7 @@ Krawedz: 21_31. Waga:1.0. EST:76.0. LST:76.0. EFT: 77.0. LFT: 77.0
 Krawedz: 32_35. Waga:4.0. EST:72.0. LST:76.0. EFT: 76.0. LFT: 80.0
 Krawedz: 33_35. Waga:8.0. EST:42.0. LST:72.0. EFT: 50.0. LFT: 80.0
 Krawedz: 31_35. Waga:3.0. EST:77.0. LST:77.0. EFT: 80.0. LFT: 80.0
-Czas sortowania: 812175
-Czas CPM: 2409660
-Czas wykonania: 3221835
+Czas sortowania: 897469
+Czas CPM: 3009800
+Czas wykonania: 3907269
 liczba powtórzeń kazdej czesci algorymtmu:1

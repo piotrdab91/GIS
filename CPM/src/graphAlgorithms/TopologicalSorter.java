@@ -13,13 +13,15 @@ public class TopologicalSorter {
 	private Graph<Milestone> graph;
 	private List<Node<Milestone>> list = new ArrayList<Node<Milestone>>();
 
-	public TopologicalSorter() {
+	public TopologicalSorter(Graph<Milestone> graph) {
+		this.graph = graph;
 	}
 
-	public List<Node<Milestone>> sortKhansAlgortithm(Graph<Milestone> graph) throws InvalidAlgorithmParameterException {
-		this.graph = graph;
+	public List<Node<Milestone>> sortKhansAlgortithm() throws InvalidAlgorithmParameterException {
 		countIndegree();
 		addRoots();
+		if(list.size()!=1)
+			adjustGraph();
 		addRemainingNodes();
 		System.out.println(list);
 		if (list.size() != graph.getNodesList().size())
@@ -27,7 +29,7 @@ public class TopologicalSorter {
 		return list;
 	}
 
-	private void countIndegree() {
+	public void countIndegree() {
 
 		for (Node<Milestone> node : graph.getNodesList())
 			for (Edge<Milestone> e : node.getIngoingEdges())
@@ -56,5 +58,12 @@ public class TopologicalSorter {
 				}
 			}
 		}
+	}
+	public void adjustGraph(){
+		int begin = list.size()-1;
+		for(Node n:list){
+			graph.addEdge(begin,n.getNumber(),0);
+		}
+		
 	}
 }

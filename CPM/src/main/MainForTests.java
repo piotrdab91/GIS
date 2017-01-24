@@ -19,7 +19,7 @@ public class MainForTests {
 	private static ArrayList <Graph <Milestone>> graphs = new ArrayList();
 	private static ArrayList <TopologicalSorter> sorters = new ArrayList();
 	private static Graph <Milestone> graph;
-	private static TopologicalSorter sorter = new TopologicalSorter();
+	private static TopologicalSorter sorter = new TopologicalSorter(graph);
 	private static CriticalPathCalculator criticalPath = new CriticalPathCalculator();
 	private static List<String> outputData = new ArrayList<String>();
     private static ExecuteTimeCalculator timeCalculator; 
@@ -28,18 +28,21 @@ public class MainForTests {
 		List<Node<Milestone>> sortNodes = null;
 		List<EdgeProperties<Milestone>> listOfActivities = null;
 		int repeat = 1000;
+		
+		String fileName = new String("Edges_80_100.txt");
 		timeCalculator = new ExecuteTimeCalculator(repeat);
+		
 		for(int i = 0; i<repeat; i++){
-			TopologicalSorter sorter = new TopologicalSorter();
-			sorters.add(sorter);
+			graph = DataReader.graphCreator(fileName);
+			graphs.add(graph);
 			}
 		for(int i = 0; i<repeat; i++){
-			graph = DataReader.graphCreator("Edges 20 32.txt");
-			graphs.add(graph);
+			TopologicalSorter sorter = new TopologicalSorter(graphs.get(i));
+			sorters.add(sorter);
 			}
 		timeCalculator.setStartTime(System.nanoTime());
 		for(int i =0; i<repeat; i++) {
-			sortNodes = sorters.get(i).sortKhansAlgortithm(graphs.get(i));
+			sortNodes = sorters.get(i).sortKhansAlgortithm();
 		}
 		
 		timeCalculator.setTopologicalSortingTime(System.nanoTime());
@@ -47,11 +50,11 @@ public class MainForTests {
 			listOfActivities = criticalPath.properties(sortNodes);
 		timeCalculator.setCPMTime(System.nanoTime());
 			
-		outputData.add(graph.toString());
+		/*outputData.add(graph.toString());
 		for (int i = 0 ; i<listOfActivities.size(); i++)
-			outputData.add(listOfActivities.get(i).toString());
+			//outputData.add(listOfActivities.get(i).toString());*/
 		outputData.addAll(timeCalculator.getExecuteTimes());
-		DataWriter writer = new DataWriter("Edges 20 32.txt", outputData);
+		DataWriter writer = new DataWriter((fileName+"_test"), outputData);
 	}
 	
 
