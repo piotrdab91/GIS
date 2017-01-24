@@ -1,0 +1,51 @@
+Liczba wierzcholków: 21 Liczba krawedzi: 54
+Krawedz: 20_17. Waga:10.0. EST:0.0. LST:11.0. EFT: 10.0. LFT: 21.0
+Krawedz: 20_12. Waga:5.0. EST:0.0. LST:11.0. EFT: 5.0. LFT: 16.0
+Krawedz: 20_14. Waga:6.0. EST:0.0. LST:18.0. EFT: 6.0. LFT: 24.0
+Krawedz: 20_10. Waga:3.0. EST:0.0. LST:26.0. EFT: 3.0. LFT: 29.0
+Krawedz: 20_11. Waga:15.0. EST:0.0. LST:6.0. EFT: 15.0. LFT: 21.0
+Krawedz: 20_8. Waga:15.0. EST:0.0. LST:0.0. EFT: 15.0. LFT: 15.0
+Krawedz: 17_5. Waga:4.0. EST:10.0. LST:21.0. EFT: 14.0. LFT: 25.0
+Krawedz: 17_15. Waga:8.0. EST:10.0. LST:30.0. EFT: 18.0. LFT: 38.0
+Krawedz: 12_19. Waga:7.0. EST:5.0. LST:20.0. EFT: 12.0. LFT: 27.0
+Krawedz: 12_13. Waga:9.0. EST:5.0. LST:16.0. EFT: 14.0. LFT: 25.0
+Krawedz: 12_14. Waga:2.0. EST:5.0. LST:22.0. EFT: 7.0. LFT: 24.0
+Krawedz: 10_16. Waga:9.0. EST:3.0. LST:29.0. EFT: 12.0. LFT: 38.0
+Krawedz: 10_6. Waga:5.0. EST:3.0. LST:33.0. EFT: 8.0. LFT: 38.0
+Krawedz: 11_2. Waga:6.0. EST:15.0. LST:21.0. EFT: 21.0. LFT: 27.0
+Krawedz: 8_16. Waga:6.0. EST:15.0. LST:32.0. EFT: 21.0. LFT: 38.0
+Krawedz: 8_4. Waga:6.0. EST:15.0. LST:32.0. EFT: 21.0. LFT: 38.0
+Krawedz: 8_3. Waga:5.0. EST:15.0. LST:15.0. EFT: 20.0. LFT: 20.0
+Krawedz: 8_7. Waga:8.0. EST:15.0. LST:29.0. EFT: 23.0. LFT: 37.0
+Krawedz: 8_0. Waga:4.0. EST:15.0. LST:34.0. EFT: 19.0. LFT: 38.0
+Krawedz: 5_4. Waga:1.0. EST:14.0. LST:37.0. EFT: 15.0. LFT: 38.0
+Krawedz: 5_19. Waga:2.0. EST:14.0. LST:25.0. EFT: 16.0. LFT: 27.0
+Krawedz: 5_15. Waga:7.0. EST:14.0. LST:31.0. EFT: 21.0. LFT: 38.0
+Krawedz: 9_19. Waga:4.0. EST:5.0. LST:23.0. EFT: 9.0. LFT: 27.0
+Krawedz: 9_16. Waga:7.0. EST:5.0. LST:31.0. EFT: 12.0. LFT: 38.0
+Krawedz: 9_15. Waga:7.0. EST:5.0. LST:31.0. EFT: 12.0. LFT: 38.0
+Krawedz: 14_0. Waga:7.0. EST:7.0. LST:31.0. EFT: 14.0. LFT: 38.0
+Krawedz: 14_6. Waga:3.0. EST:7.0. LST:35.0. EFT: 10.0. LFT: 38.0
+Krawedz: 14_2. Waga:3.0. EST:7.0. LST:24.0. EFT: 10.0. LFT: 27.0
+Krawedz: 3_18. Waga:6.0. EST:20.0. LST:25.0. EFT: 26.0. LFT: 31.0
+Krawedz: 3_19. Waga:7.0. EST:20.0. LST:20.0. EFT: 27.0. LFT: 27.0
+Krawedz: 3_16. Waga:8.0. EST:20.0. LST:30.0. EFT: 28.0. LFT: 38.0
+Krawedz: 3_4. Waga:2.0. EST:20.0. LST:36.0. EFT: 22.0. LFT: 38.0
+Krawedz: 7_4. Waga:1.0. EST:23.0. LST:37.0. EFT: 24.0. LFT: 38.0
+Krawedz: 13_6. Waga:5.0. EST:14.0. LST:33.0. EFT: 19.0. LFT: 38.0
+Krawedz: 13_0. Waga:7.0. EST:14.0. LST:31.0. EFT: 21.0. LFT: 38.0
+Krawedz: 13_4. Waga:6.0. EST:14.0. LST:32.0. EFT: 20.0. LFT: 38.0
+Krawedz: 13_1. Waga:8.0. EST:14.0. LST:25.0. EFT: 22.0. LFT: 33.0
+Krawedz: 2_1. Waga:4.0. EST:21.0. LST:29.0. EFT: 25.0. LFT: 33.0
+Krawedz: 2_16. Waga:1.0. EST:21.0. LST:37.0. EFT: 22.0. LFT: 38.0
+Krawedz: 2_4. Waga:4.0. EST:21.0. LST:34.0. EFT: 25.0. LFT: 38.0
+Krawedz: 2_6. Waga:6.0. EST:21.0. LST:32.0. EFT: 27.0. LFT: 38.0
+Krawedz: 18_15. Waga:5.0. EST:26.0. LST:33.0. EFT: 31.0. LFT: 38.0
+Krawedz: 18_4. Waga:7.0. EST:26.0. LST:31.0. EFT: 33.0. LFT: 38.0
+Krawedz: 19_1. Waga:6.0. EST:27.0. LST:27.0. EFT: 33.0. LFT: 33.0
+Krawedz: 1_15. Waga:1.0. EST:33.0. LST:37.0. EFT: 34.0. LFT: 38.0
+Krawedz: 1_4. Waga:5.0. EST:33.0. LST:33.0. EFT: 38.0. LFT: 38.0
+Czas sortowania: 435310
+Czas CPM: 1699224
+Czas wykonania: 2134534
+liczba powtórzeń kazdej czesci algorymtmu:1

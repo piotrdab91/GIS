@@ -13,33 +13,45 @@ import Model.Node;
 import graphAlgorithms.CriticalPathCalculator;
 import graphAlgorithms.TopologicalSorter;
 
-public class Main {
+public class MainForTests {
 
 	
-	private static Graph <Milestone> graph = new Graph<Milestone>(0,Milestone.class);
+	private static ArrayList <Graph <Milestone>> graphs = new ArrayList();
+	private static ArrayList <TopologicalSorter> sorters = new ArrayList();
+	private static Graph <Milestone> graph;
 	private static TopologicalSorter sorter = new TopologicalSorter();
 	private static CriticalPathCalculator criticalPath = new CriticalPathCalculator();
 	private static List<String> outputData = new ArrayList<String>();
-    private static ExecuteTimeCalculator timeCalculator = new ExecuteTimeCalculator(1);
+    private static ExecuteTimeCalculator timeCalculator; 
 	public static void main(String[] args) throws IOException, InvalidAlgorithmParameterException {
 
-		System.out.println(graph.getNodesList().size());
-		graph = DataReader.graphCreator("Edges.txt");
-		
-		//System.out.println(graph.g);
+		List<Node<Milestone>> sortNodes = null;
+		List<EdgeProperties<Milestone>> listOfActivities = null;
+		int repeat = 1000;
+		timeCalculator = new ExecuteTimeCalculator(repeat);
+		for(int i = 0; i<repeat; i++){
+			TopologicalSorter sorter = new TopologicalSorter();
+			sorters.add(sorter);
+			}
+		for(int i = 0; i<repeat; i++){
+			graph = DataReader.graphCreator("Edges 20 32.txt");
+			graphs.add(graph);
+			}
 		timeCalculator.setStartTime(System.nanoTime());
-		List<Node<Milestone>> sortNodes= sorter.sortKhansAlgortithm(graph);
-		//List<Node<Milestone>> sortRoots=sorter.addRoots();
-		//System.out.println(sortRoots);
+		for(int i =0; i<repeat; i++) {
+			sortNodes = sorters.get(i).sortKhansAlgortithm(graphs.get(i));
+		}
+		
 		timeCalculator.setTopologicalSortingTime(System.nanoTime());
-		List<EdgeProperties<Milestone>> listOfActivities = criticalPath.properties(sortNodes);
+		for(int i = 0; i<repeat; i++)
+			listOfActivities = criticalPath.properties(sortNodes);
 		timeCalculator.setCPMTime(System.nanoTime());
 			
 		outputData.add(graph.toString());
 		for (int i = 0 ; i<listOfActivities.size(); i++)
 			outputData.add(listOfActivities.get(i).toString());
 		outputData.addAll(timeCalculator.getExecuteTimes());
-		DataWriter writer = new DataWriter("Edges.txt", outputData);
+		DataWriter writer = new DataWriter("Edges 20 32.txt", outputData);
 	}
 	
 

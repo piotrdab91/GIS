@@ -20,6 +20,13 @@ public class DataWriter {
 				
 	}
 	
+	public DataWriter(String inputName, List<String> lines, int repeat) throws IOException {
+		this.inputName = inputName;
+		this.outputName = this.inputName.replace(".txt", "-Result.txt");
+		Path file = Paths.get("resources/output", outputName);
+		Files.write(file, lines, Charset.forName("UTF-8"));
+		System.out.println("Wygenerowano plik:" + this.outputName);
+		}
 	
 	
 }

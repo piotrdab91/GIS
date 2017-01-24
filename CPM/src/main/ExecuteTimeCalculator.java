@@ -7,6 +7,12 @@ public class ExecuteTimeCalculator {
 	private long topologicalSortingTime;
 	private long CPMTime;
 	private ArrayList<String> list = new ArrayList<String>();
+	private int repeat;
+	
+	
+	public ExecuteTimeCalculator(int repeat) {
+		this.repeat = repeat;
+	}
 
 	public long getStartTime() {
 		return startTime;
@@ -33,9 +39,12 @@ public class ExecuteTimeCalculator {
 	}
 
 	public ArrayList<String> getExecuteTimes() {
-		list.add("Czas sortowania: " + (topologicalSortingTime - startTime));
-		list.add("Czas CPM: " + (CPMTime - topologicalSortingTime));
-		list.add("Czas wykonania: " + (CPMTime - startTime));
+		long TimeSort = (topologicalSortingTime - startTime)/repeat;
+		long TimeCPM = (CPMTime - topologicalSortingTime)/repeat;
+		list.add("Czas sortowania: " + TimeSort);
+		list.add("Czas CPM: " + TimeCPM);
+		list.add("Czas wykonania: " + (TimeCPM+ TimeSort));
+		list.add("liczba powtórzeń kazdej czesci algorymtmu:" + repeat);
 		return list;
 	}
 }

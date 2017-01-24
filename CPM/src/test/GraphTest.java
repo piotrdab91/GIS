@@ -17,6 +17,8 @@ public class GraphTest {
 	public void testGraphInt() {
 		Graph<String> graph = new Graph<String>(5,String.class);
 		assertEquals(2, graph.getNodesList().get(2).getNumber());
+		assertEquals(5, graph.getNodesList().size());
+		System.out.println(graph.getNodesList());
 	}
 	
 	@Test

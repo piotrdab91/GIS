@@ -34,7 +34,7 @@ public class TopologicalSorter {
 				e.getEnd().getNodeProperties().incInDegree();
 	}
 
-	private List<Node<Milestone>> addRoots() {
+	public List<Node<Milestone>> addRoots() {
 		for (Node<Milestone> node : graph.getNodesList()) {
 			if (node.getNodeProperties().getInDegree() == 0) {
 				list.add(node);
